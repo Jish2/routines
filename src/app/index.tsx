@@ -1,6 +1,7 @@
+import { SwipeGesture } from "@/components/SwipeGesture";
 import { StatusBar } from "expo-status-bar";
 import { useEffect, useState } from "react";
-import { Alert, Button, StyleSheet, Text, View } from "react-native";
+import { Alert, Button, FlatList, StyleSheet, Text, View } from "react-native";
 import styled from "styled-components/native";
 
 const AlertButton = styled.TouchableOpacity`
@@ -37,6 +38,9 @@ export default function App() {
 			<AlertButton onPress={() => setCount((p) => p + 1)}>
 				<Text>testing 123</Text>
 			</AlertButton>
+
+			<SwipeGesture />
+
 			<StatusBar style="auto" />
 		</Container>
 	);
